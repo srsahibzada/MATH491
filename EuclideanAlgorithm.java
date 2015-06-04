@@ -23,7 +23,7 @@ import java.io.IOException;
 
 public class EuclideanAlgorithm implements Runnable {
 	//variables to be monitored
-	BigInteger a;
+	BigInteger a;  
 	BigInteger b;
 	BigInteger numIterations = new BigInteger("0");
 	BigInteger gcd;
