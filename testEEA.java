@@ -1,6 +1,8 @@
 /*
-  To run in command line: download and compile with javac testEEA.java ; run with java testEEA
-
+	MATH 491 Computational Number Theory group: Stephen Capps, Sarah Sahibzada, Taylor Wilson
+	Code by Sarah Sahibzada
+	Performs Extended Euclidean Algorithm on a user-specified amount of random numbers of arbitrary length
+	and writes them to a CSV.
 */
 
 
@@ -187,7 +189,7 @@ public class testEEA {
         ch[i] =
             (char) ('0' + (i == 0 ? r.nextInt(9) + 1 : r.nextInt(10)));
     }
-	System.out.println(new BigInteger(new String(ch)).toString());
+	//System.out.println(new BigInteger(new String(ch)).toString()); //uncomment to verify
     return new BigInteger(new String(ch));
 	}
 	
@@ -234,12 +236,14 @@ public class testEEA {
 			System.out.println("All input written to file " + destinationFile + mode );
 		}
 	}
-		public static void printEEAList() {
+	//for testing and debugging
+	public static void printEEAList() {
 		for (testEEA t : EEAList) {
 			System.out.println(t); 
 		}
 	}
 	
+	//generates the list
 	public static void EEAWriter(int numDigits, int numPairs) {
 		for (int i = 0; i < numPairs; i++) {
 		Random r1 = new Random();
@@ -249,6 +253,17 @@ public class testEEA {
 		}	
 	}
 	
+	//for testing purposes
+	public static boolean testEEAList() {
+		int i = 0;
+		for (testEEA t : EEAList) {
+			System.out.println(t);
+			if (((t.getFirstArg().multiply(t.getFirstBezout())).add(t.getSecondArg().multiply(t.getSecondBezout()))).equals(t.getGCD())) {
+				i += 1;
+			}
+		}
+		return (i == EEAList.size());
+	}
 	public static void main(String[] args) throws IOException {
 		Scanner input = new Scanner(System.in);
 		int userChoice;
@@ -269,6 +284,7 @@ public class testEEA {
 				fileName = input.next();
 				EEAWriter(numDigits,numToGen);
 				addToFile(fileName,TXTMODE);
+				//System.out.println("EEAList correct values: " + testEEAList());//uncomment to verify list
 				break;
 			case 2:
 				System.out.println("How many pairs do you wish to generate?");
@@ -279,6 +295,7 @@ public class testEEA {
 				fileName = input.next();
 				EEAWriter(numDigits,numToGen);
 				addToFile(fileName,CSVMODE);
+				//System.out.println("EEAList correct values: " + testEEAList());//uncomment to verify list
 				break;
 			default:
 				System.out.println("Bad input, exiting now");
