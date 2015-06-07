@@ -24,29 +24,32 @@ def gcd_iter(p, q):
           
      return i
 
+def f(x):
+     y = 1.618*x
+     return y
     
 def main():
      directory = []
      x = []
      y = []
      dictionary = defaultdict(int)
-     for q in range(1,10**2):
-          for p in range(q,10**2):
+     '''for q in range(1,10**3):
+          for p in range(q,10**3):
                d = gcd_iter(p,q)
                directory += [[p,q,d]]
-               dictionary[str(d)] += 1
+               dictionary[str(d)] += 1'''
      
-     '''for i in range(0,10000):
-          q = random.randint(0,10**1000)
+     for i in range(0,50000):
+          q = random.randint(0,10**10)
           
-          p = random.randint(q,10**1000) 
+          p = random.randint(q,10**10) 
 
 
           d  = gcd_iter(p, q)
           
           directory += [[p,q,d]]
           
-          dictionary[str(d)] += 1'''
+          dictionary[str(d)] += 1
 
 
           
@@ -93,14 +96,15 @@ def main():
           checkmax += [i[2]]
           
      maximum_iterations = max(checkmax)
+     minimum_iterations = min(checkmax)
      print
      checkmax = sorted(set(checkmax))
      
-     '''s1 = checkmax[0]
-     s2 = checkmax[1]
-     s3 = checkmax[2]
-     s4 = checkmax[3]
-     s5 = checkmax[4]
+     '''s1 = checkmax[-1]
+     s2 = checkmax[-2]
+     s3 = checkmax[-3]
+     s4 = checkmax[-4]
+     s5 = checkmax[-5]
      s6 = checkmax[5]
      s7 = checkmax[6]
      s8 = checkmax[7]
@@ -119,16 +123,19 @@ def main():
           y_667 += [i[2]]'''
 
 
-     
+     almost_longest = []
      
      print 
      
      for i in directory:
           if i[2] == maximum_iterations:
                longest_gcds += [i]
-          '''if i[2] == minimum_iterations:
-               #shortest_gcds += [i]
-          if i[2] == s1:
+          if i[2] == minimum_iterations:
+               shortest_gcds += [i]
+          if (i[2] == checkmax[-2]) or (i[2] == checkmax[-3]) or (i[2] == checkmax[-4]):
+               almost_longest +=[i]
+              
+          '''if i[2] == s1:
                x1 += [i[0]]
                y1 += [i[1]]
                
@@ -188,10 +195,27 @@ def main():
      for i in longest_gcds:
           print  "gcd(" + str(i[0]) + ", " + str(i[1]) + ")  |  Iterations:" + str(i[2])
           
+     print "\n---------------------------------------------------------\n"
+     
      print "The following p's and q's return the shortest number of iterations:\n"
      for i in shortest_gcds:
           print  "gcd(" + str(i[0]) + ", " + str(i[1]) + ")  |  Iterations:" + str(i[2])
-
+     
+     print "\n---------------------------------------------------------\n"
+          
+     '''print "The following p's and q's return a large number of iterations:\n"
+     
+     avg = 0.0
+     k = 0
+     
+     for i in almost_longest:
+          avg += float(i[0])/float(i[1])
+          print  "gcd(" + str(i[0]) + ", " + str(i[1]) + ") | Ratio p/q: " +str(float(i[0])/float(i[1])) +" |  Iterations: " + str(i[2])
+          k = k + 1
+          
+     avg = avg/k
+     print "Average p/q: " + str(avg)'''
+     
      
 
 
@@ -201,18 +225,21 @@ def main():
           y += [dictionary[i]]
 
 
-          
+     #t1 = np.arange(0.0, 100000.0, 10)
+     
+     
                                                                                           
      colors = np.random.rand(15)
      fig = plt.figure()
      ax = plt.subplot(111)
-     ax.bar(x,y)
-     '''ax.scatter(x_667,y_667)
+     ax.bar(x,y,1)
+     '''#ax.scatter(x_667,y_667)
+     
      ax.scatter(x1,y1, c = 'b')
-     ax.scatter(x2,y2, c = 'b')
-     ax.scatter(x3,y3, c = 'g')
-     ax.scatter(x4,y4, c = 'g')
-     ax.scatter(x5,y5, c= 'r')
+     ax.scatter(x2,y2, c = 'g')
+     ax.scatter(x3,y3, c = 'r')
+     ax.scatter(x4,y4, c = 'c')
+     ax.scatter(x5,y5, c= 'm')
      ax.scatter(x6,y6, c='r')
      ax.scatter(x7,y7,c= 'c')
      ax.scatter(x8,y8, c='c')
@@ -222,12 +249,13 @@ def main():
      #ax.scatter(x12,y12, c= 'y')
      #ax.scatter(x13,y13, c='k')
      #ax.scatter(x14,y14,c= 'k')
-     #ax.scatter(x15,y15,c='w')'''
+     #ax.scatter(x15,y15,c='w')
+     plt.plot(t1,f(t1), 'k')'''
 
      
-     plt.xlabel("Iterations to Finish the EA")
-     plt.ylabel("Number of times the iteration amount appeared")
-     plt.title("Frequency of iterations of the gcd(p,q) for all pairs (p,q) such that q < p < 100")
+     plt.xlabel("Iterations")
+     plt.ylabel("Frequency")
+     plt.title("Iterations Frequency of 50,000 random pairs of the gcd(p,q) such that q < p < 10^10 ")
      plt.show()
      
 main()
