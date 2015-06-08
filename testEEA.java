@@ -203,6 +203,9 @@ public class testEEA {
 			old_t = t;
 			t = temp.subtract(quotient.multiply(t));
 		}
+			futureFirst.add(old_s);
+			futureSecond.add(old_t);
+
 
 		testEEA toReturn = new testEEA(_a,_b,computeRatio(_a,_b), numIterations, old_s, old_t, old_r, futureFirst, futureSecond);
 		return toReturn;
