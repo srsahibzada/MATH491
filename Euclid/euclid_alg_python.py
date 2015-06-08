@@ -201,9 +201,9 @@ def main():
      for i in shortest_gcds:
           print  "gcd(" + str(i[0]) + ", " + str(i[1]) + ")  |  Iterations:" + str(i[2])
      
-     print "\n---------------------------------------------------------\n"
+     '''print "\n---------------------------------------------------------\n"
           
-     '''print "The following p's and q's return a large number of iterations:\n"
+     print "The following p's and q's return a large number of iterations:\n"
      
      avg = 0.0
      k = 0
