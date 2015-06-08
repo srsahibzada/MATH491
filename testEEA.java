@@ -36,12 +36,17 @@ public class testEEA {
 	private BigInteger finalBezoutCoeff1;
 	private BigInteger finalBezoutCoeff2;
 	private BigInteger gcd;
+	private ArrayList<BigInteger> firstCoeffs = new ArrayList<BigInteger>();
+	private ArrayList<BigInteger> secondCoeffs = new ArrayList<BigInteger>();
 	//constants
 	public static final int LESS = -1;
 	public static final int EQUALS = 0;
 	public static final int GREATER = 1;
 	public static final char COMMA = ',';
+	public static final char DELIM = ' ';
 	public static final char NEWLINE = '\n';
+	public static final char LEFTPAREN = '(';
+	public static final char RIGHTPAREN = ')';
 	public static final String FIRSTARG = "A";
 	public static final String SECONDARG = "B";
 	public static final String RATIO = "Ratio A/B";
@@ -50,6 +55,8 @@ public class testEEA {
 	public static final String GCD = "GCD";
 	public static final String NUM = "# Iterations";
 	public static final int maxNumDecimalPlaces = 10;
+	
+
 	testEEA(BigInteger a, BigInteger b) {
 	if (a.compareTo(b) == LESS) {
 		BigInteger temp = b;
@@ -60,7 +67,7 @@ public class testEEA {
 		this.secondArg = b;
 	}
 	
-		testEEA(BigInteger a, BigInteger b, BigDecimal r, BigInteger n, BigInteger fbc1, BigInteger fbc2, BigInteger gcd) {
+		testEEA(BigInteger a, BigInteger b, BigDecimal r, BigInteger n, BigInteger fbc1, BigInteger fbc2, BigInteger gcd, ArrayList<BigInteger> first, ArrayList<BigInteger> second) {
 		if (a.compareTo(b) == LESS) {
 			BigInteger temp = b;
 			b = a;
@@ -73,6 +80,8 @@ public class testEEA {
 			this.finalBezoutCoeff1 = fbc1;
 			this.finalBezoutCoeff2 = fbc2;
 			this.gcd = gcd;
+			this.firstCoeffs = first;
+			this.secondCoeffs = second;
 		}
 	testEEA() {
 		//null
@@ -99,6 +108,16 @@ public class testEEA {
 	public BigInteger getSecondBezout() {
 		return this.finalBezoutCoeff2;
 	}
+	
+	public void addToList(boolean which, BigInteger coeff) {
+		if (which) {
+			firstCoeffs.add(coeff);
+		}
+		else {
+			secondCoeffs.add(coeff);
+		}
+	}
+	
 	public String getFieldString(String field) {
 		if (field.equals(FIRSTARG)) {
 			return firstArg.toString();
@@ -156,6 +175,10 @@ public class testEEA {
 			_b = _a;
 			_a = temp;
 	}
+	//testEEA(BigInteger a, BigInteger b, BigDecimal r, BigInteger n, BigInteger fbc1, BigInteger fbc2, BigInteger gcd, ArrayList<BigInteger> first, ArrayList<BigInteger> second) {
+
+		ArrayList<BigInteger> futureFirst = new ArrayList<BigInteger>();
+		ArrayList<BigInteger> futureSecond = new ArrayList<BigInteger>();
 		BigInteger old_r = _a;
 		BigInteger r = _b;
 		BigInteger s = new BigInteger("0");
@@ -166,6 +189,8 @@ public class testEEA {
 		BigInteger numIterations = BigInteger.ZERO;
 		//wiki algorithm for extended euclidean algorithm
 		while(!r.equals(BigInteger.ZERO)) {
+			futureFirst.add(old_s);
+			futureSecond.add(old_t);
 			numIterations = numIterations.add(BigInteger.ONE);
 			BigInteger quotient = old_r.divide(r);
 			temp = old_r;
@@ -179,7 +204,7 @@ public class testEEA {
 			t = temp.subtract(quotient.multiply(t));
 		}
 
-		testEEA toReturn = new testEEA(_a,_b,computeRatio(_a,_b), numIterations, old_s, old_t, old_r);
+		testEEA toReturn = new testEEA(_a,_b,computeRatio(_a,_b), numIterations, old_s, old_t, old_r, futureFirst, futureSecond);
 		return toReturn;
 		}
 	//http://stackoverflow.com/questions/3709521/how-do-i-generate-a-random-n-digit-integer-in-java-using-the-biginteger-class
@@ -236,6 +261,36 @@ public class testEEA {
 			System.out.println("All input written to file " + destinationFile + mode );
 		}
 	}
+	public static void writeCoeffsToFile(String fileName) throws IOException {
+		FileWriter coeffsFiles = new FileWriter(fileName);
+		try {
+			for (testEEA t : EEAList) {
+				coeffsFiles.append(LEFTPAREN);
+				coeffsFiles.append(t.getFirstArg().toString());
+				coeffsFiles.append(DELIM);
+				coeffsFiles.append(t.getSecondArg().toString());
+				coeffsFiles.append(RIGHTPAREN);
+				coeffsFiles.append(COMMA);
+				for(int i = 0; i < t.firstCoeffs.size(); i++) {
+					coeffsFiles.append(LEFTPAREN);
+				coeffsFiles.append(t.firstCoeffs.get(i).toString());
+				coeffsFiles.append(DELIM);
+				coeffsFiles.append(t.secondCoeffs.get(i).toString());
+				coeffsFiles.append(RIGHTPAREN);
+				coeffsFiles.append(COMMA);
+				}
+				
+				coeffsFiles.append(NEWLINE);
+			}
+		}
+		catch(IOException e) {
+			e.printStackTrace();
+		}
+		finally {
+			coeffsFiles.flush();
+			coeffsFiles.close();
+		}
+	}
 	//for testing and debugging
 	public static void printEEAList() {
 		for (testEEA t : EEAList) {
@@ -269,6 +324,7 @@ public class testEEA {
 		int userChoice;
 		int numToGen;
 		int numDigits;
+		String storeCoeffs;
 		String fileName;
 		System.out.println("This program will generate data on the Euclidean algorithm using random numbers of a user-specified length. Do you want this as:");
 		System.out.println("[1] A .txt file");
@@ -284,7 +340,8 @@ public class testEEA {
 				fileName = input.next();
 				EEAWriter(numDigits,numToGen);
 				addToFile(fileName,TXTMODE);
-				//System.out.println("EEAList correct values: " + testEEAList());//uncomment to verify list
+				writeCoeffsToFile(fileName+"_coefficient_list"+CSVMODE);
+				//System.out.println("EEAList correct values: " + testEEAList());//uncomment to verify list				
 				break;
 			case 2:
 				System.out.println("How many pairs do you wish to generate?");
@@ -295,6 +352,7 @@ public class testEEA {
 				fileName = input.next();
 				EEAWriter(numDigits,numToGen);
 				addToFile(fileName,CSVMODE);
+				writeCoeffsToFile(fileName+"_coefficient_list"+CSVMODE);
 				//System.out.println("EEAList correct values: " + testEEAList());//uncomment to verify list
 				break;
 			default:
