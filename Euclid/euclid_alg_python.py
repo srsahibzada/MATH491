@@ -33,13 +33,13 @@ def main():
      x = []
      y = []
      dictionary = defaultdict(int)
-     '''for q in range(1,10**3):
-          for p in range(q,10**3):
+     for q in range(1,10**2):
+          for p in range(q,10**2):
                d = gcd_iter(p,q)
                directory += [[p,q,d]]
-               dictionary[str(d)] += 1'''
+               dictionary[str(d)] += 1
      
-     for i in range(0,50000):
+     '''for i in range(0,50000):
           q = random.randint(0,10**10)
           
           p = random.randint(q,10**10) 
@@ -49,7 +49,7 @@ def main():
           
           directory += [[p,q,d]]
           
-          dictionary[str(d)] += 1
+          dictionary[str(d)] += 1'''
 
 
           
@@ -255,7 +255,7 @@ def main():
      
      plt.xlabel("Iterations")
      plt.ylabel("Frequency")
-     plt.title("Iterations Frequency of 50,000 random pairs of the gcd(p,q) such that q < p < 10^10 ")
+     plt.title("Iterations Frequency of all pairs of the gcd(p,q) such that q < p < 100")
      plt.show()
      
 main()
