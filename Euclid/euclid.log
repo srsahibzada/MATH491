@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  13 JUN 2015 20:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  15 JUN 2015 06:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -176,79 +176,117 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \openout3 = `euclid.toc'.
 
  [1]
-Underfull \hbox (badness 10000) in paragraph at lines 114--115
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no § in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no § in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no • in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ú in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ù in font cmr10!
+
+Underfull \hbox (badness 10000) in paragraph at lines 110--117
 
  []
 
-<2digit_iterationfreq.jpg, id=16, 803.0pt x 602.25pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 110--117
+
+ []
+
+[2] [3]
+Underfull \hbox (badness 10000) in paragraph at lines 142--144
+
+ []
+
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ú in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ù in font cmr10!
+
+Underfull \hbox (badness 10000) in paragraph at lines 161--162
+
+ []
+
+[4] <2digit_iterationfreq.jpg, id=28, 803.0pt x 602.25pt>
 File: 2digit_iterationfreq.jpg Graphic file (type jpg)
 
 <use 2digit_iterationfreq.jpg>
-Package pdftex.def Info: 2digit_iterationfreq.jpg used on input line 118.
+Package pdftex.def Info: 2digit_iterationfreq.jpg used on input line 165.
 (pdftex.def)             Requested size: 321.1943pt x 240.89572pt.
 
-<4digit_iteration_freq.jpg, id=17, 803.0pt x 602.25pt>
+<4digit_iteration_freq.jpg, id=29, 803.0pt x 602.25pt>
 File: 4digit_iteration_freq.jpg Graphic file (type jpg)
 
 <use 4digit_iteration_freq.jpg>
-Package pdftex.def Info: 4digit_iteration_freq.jpg used on input line 120.
+Package pdftex.def Info: 4digit_iteration_freq.jpg used on input line 167.
 (pdftex.def)             Requested size: 321.1943pt x 240.89572pt.
 
-<10_digit_numbers.jpg, id=18, 803.0pt x 602.25pt>
+<10_digit_numbers.jpg, id=30, 803.0pt x 602.25pt>
 File: 10_digit_numbers.jpg Graphic file (type jpg)
  <use 10_digit_numbers.jpg>
-Package pdftex.def Info: 10_digit_numbers.jpg used on input line 126.
+Package pdftex.def Info: 10_digit_numbers.jpg used on input line 173.
 (pdftex.def)             Requested size: 321.1943pt x 240.89572pt.
 
-<100_digit_numbers_freq.jpg, id=19, 803.0pt x 602.25pt>
+<100_digit_numbers_freq.jpg, id=31, 803.0pt x 602.25pt>
 File: 100_digit_numbers_freq.jpg Graphic file (type jpg)
 
 <use 100_digit_numbers_freq.jpg>
-Package pdftex.def Info: 100_digit_numbers_freq.jpg used on input line 128.
+Package pdftex.def Info: 100_digit_numbers_freq.jpg used on input line 175.
 (pdftex.def)             Requested size: 321.1943pt x 240.89572pt.
 
-<1000_digit_numbers.jpg, id=20, 803.0pt x 602.25pt>
+<1000_digit_numbers.jpg, id=32, 803.0pt x 602.25pt>
 File: 1000_digit_numbers.jpg Graphic file (type jpg)
 
 <use 1000_digit_numbers.jpg>
-Package pdftex.def Info: 1000_digit_numbers.jpg used on input line 138.
+Package pdftex.def Info: 1000_digit_numbers.jpg used on input line 185.
 (pdftex.def)             Requested size: 321.1943pt x 240.89572pt.
- [2] [3 <./2digit_iterationfreq.jpg> <./4digit_iteration_freq.jpg>] [4 <./10_di
+ [5] [6 <./2digit_iterationfreq.jpg> <./4digit_iteration_freq.jpg>] [7 <./10_di
 git_numbers.jpg> <./100_digit_numbers_freq.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 143--144
+Underfull \hbox (badness 10000) in paragraph at lines 190--191
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 145--146
+Underfull \hbox (badness 10000) in paragraph at lines 192--193
 
  []
 
-[5 <./1000_digit_numbers.jpg>] [6] (./euclid.aux) ) 
+[8 <./1000_digit_numbers.jpg>] [9] (./euclid.aux) ) 
 Here is how much of TeX's memory you used:
  1833 strings out of 493117
  26536 string characters out of 6135433
- 84505 words of memory out of 5000000
+ 86505 words of memory out of 5000000
  5280 multiletter control sequences out of 15000+600000
  16499 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,8n,23p,387b,247s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,8n,23p,1054b,247s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2014/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2014/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2014/texmf
 -dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2014/texmf
--dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2014/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2014/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2014/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2014/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2014/texmf-dist/font
-s/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2014/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2014/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmti12.pfb>
-Output written on euclid.pdf (7 pages, 441135 bytes).
+-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2014/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2014/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2014/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2014/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2014/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2014/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2014/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2014/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmti12.pfb>
+Output written on euclid.pdf (10 pages, 459812 bytes).
 PDF statistics:
- 77 PDF objects out of 1000 (max. 8388607)
- 51 compressed objects within 1 object stream
+ 90 PDF objects out of 1000 (max. 8388607)
+ 60 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  26 words of extra memory for PDF output out of 10000 (max. 10000000)
 

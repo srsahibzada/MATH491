@@ -1,3 +1,4 @@
+import math
 import numpy as np
 import random
 from collections import defaultdict
@@ -32,14 +33,24 @@ def main():
      directory = []
      x = []
      y = []
+     y_normal = []
      dictionary = defaultdict(int)
-     for q in range(1,10**2):
-          for p in range(q,10**2):
+     
+     mean = 0.0
+     sigma = 0.0
+     n = 0
+     
+     '''for q in range(1,10**3):
+          for p in range(q,10**3):
+               n += 1
                d = gcd_iter(p,q)
                directory += [[p,q,d]]
                dictionary[str(d)] += 1
+               mean += float(d)
+     mean = mean/n'''
      
-     '''for i in range(0,50000):
+     for i in range(0,50000):
+          n += 1
           q = random.randint(0,10**10)
           
           p = random.randint(q,10**10) 
@@ -49,7 +60,9 @@ def main():
           
           directory += [[p,q,d]]
           
-          dictionary[str(d)] += 1'''
+          dictionary[str(d)] += 1
+          mean += float(d)
+     mean = mean/n
 
 
           
@@ -134,7 +147,8 @@ def main():
                shortest_gcds += [i]
           if (i[2] == checkmax[-2]) or (i[2] == checkmax[-3]) or (i[2] == checkmax[-4]):
                almost_longest +=[i]
-              
+          sigma += (i[2]-mean)**2
+          
           '''if i[2] == s1:
                x1 += [i[0]]
                y1 += [i[1]]
@@ -187,8 +201,13 @@ def main():
                y15 += [i[1]]'''               
                     
      
-               
-          
+     sigma = (sigma/(n-1))**.5
+     
+     print len(x)
+     
+     
+     
+     print len(y_normal)
      print
      
      print "The following p's and q's return the largest number of iterations:\n"
@@ -227,12 +246,22 @@ def main():
 
      #t1 = np.arange(0.0, 100000.0, 10)
      
+     x__ = np.arange(1,maximum_iterations,.1)
      
+     for x_ in x__:
+               
+               y_normal += [25000*float((1/((sigma*2*3.14159265)**.5))*math.exp((-(x_ - mean)**2)/(2*sigma)))]
+     
+     
+     print x
+     print y_normal
                                                                                           
      colors = np.random.rand(15)
      fig = plt.figure()
      ax = plt.subplot(111)
+     plt.plot(x__,y_normal,'r--')
      ax.bar(x,y,1)
+     
      '''#ax.scatter(x_667,y_667)
      
      ax.scatter(x1,y1, c = 'b')
