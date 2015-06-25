@@ -12,7 +12,7 @@ import numpy
 # 	http://pybrain.org/docs/quickstart/training.html
 #	http://pybrain.org/docs/quickstart/network.html
 #	http://pybrain.org/docs/quickstart/dataset.html
-#the above was used to structure this, also to test the XOR data since pybrain's example is outdated/doesnt work
+#the above was used to structure this, also to test the XOR data since pybrain's example is purportedly outdated
 '''testDataXOR = [
 	[(0,0),(0,)],
 	[(0,1),(1,)],
