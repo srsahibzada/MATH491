@@ -8,7 +8,10 @@ import matplotlib # figure out how to graph convergence
 import numpy
 #matplotlib
 #verbose flag: lets you print errors
-#source : http://stackoverflow.com/questions/12050460/neural-network-training-with-pybrain-wont-converge
+#sources : http://stackoverflow.com/questions/12050460/neural-network-training-with-pybrain-wont-converge
+# 	http://pybrain.org/docs/quickstart/training.html
+#	http://pybrain.org/docs/quickstart/network.html
+#	http://pybrain.org/docs/quickstart/dataset.html
 #the above was used to structure this, also to test the XOR data since pybrain's example is outdated/doesnt work
 '''testDataXOR = [
 	[(0,0),(0,)],
