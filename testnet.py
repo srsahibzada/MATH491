@@ -48,7 +48,7 @@ class testPrimeFactorization(SupervisedDataSet):
 #matplotlib
 #verbose flag:
 #source : http://stackoverflow.com/questions/12050460/neural-network-training-with-pybrain-wont-converge
-#the above was used to structure this, also to test the XOR data since pybrain's example is outdated/doesnt work
+
 
 def checkIfInt(floatnum):
 	return isinstance(floatnum,float) and int(floatnum) #double check to see if floatnum is actually integer
