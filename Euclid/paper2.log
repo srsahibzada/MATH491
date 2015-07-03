@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  15 JUN 2015 15:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  2 JUL 2015 21:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**euclid.tex
-(./euclid.tex
+**paper2.tex
+(./paper2.tex
 LaTeX2e <2014/05/01>
 Babel <3.9k> and hyphenation patterns for 78 languages loaded.
 (/usr/local/texlive/2014/texmf-dist/tex/latex/base/article.cls
@@ -80,8 +80,8 @@ Package: bm 2004/02/26 v1.1c Bold Symbol Support (DPC/FMi)
 \symboldsymbols=\mathgroup6
 LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 137.
 LaTeX Info: Redefining \bm on input line 203.
-) (./euclid.aux)
-\openout1 = `euclid.aux'.
+) (./paper2.aux)
+\openout1 = `paper2.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
 LaTeX Font Info:    ... okay on input line 7.
@@ -177,186 +177,31 @@ Package pdftex.def Info: tamulogo.png used on input line 60.
 
 {/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./tamul
 ogo.png>]
-(./euclid.toc)
+(./paper2.toc)
 \tf@toc=\write3
-\openout3 = `euclid.toc'.
+\openout3 = `paper2.toc'.
 
- [1]
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ú in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ù in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ô in font cmr10!
- [2]
-Underfull \hbox (badness 10000) in paragraph at lines 125--128
-
- []
-
-[3]
-Underfull \hbox (badness 10000) in paragraph at lines 129--130
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 131--132
-
- []
-
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ú in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ù in font cmr10!
-
-Underfull \hbox (badness 10000) in paragraph at lines 133--137
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 133--137
-
- []
-
-[4]
-Underfull \hbox (badness 10000) in paragraph at lines 163--167
-
- []
-
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ú in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ù in font cmr10!
-[5] [6] [7]
-Underfull \hbox (badness 10000) in paragraph at lines 210--212
-
- []
-
-[8] <2digit_iterationfreq.jpg, id=46, 803.0pt x 602.25pt>
-File: 2digit_iterationfreq.jpg Graphic file (type jpg)
-
-<use 2digit_iterationfreq.jpg>
-Package pdftex.def Info: 2digit_iterationfreq.jpg used on input line 215.
-(pdftex.def)             Requested size: 321.1943pt x 240.89572pt.
-
-<4digit_iteration_freq.jpg, id=47, 803.0pt x 602.25pt>
-File: 4digit_iteration_freq.jpg Graphic file (type jpg)
-
-<use 4digit_iteration_freq.jpg>
-Package pdftex.def Info: 4digit_iteration_freq.jpg used on input line 217.
-(pdftex.def)             Requested size: 321.1943pt x 240.89572pt.
-
-<10_digit_numbers.jpg, id=48, 803.0pt x 602.25pt>
-File: 10_digit_numbers.jpg Graphic file (type jpg)
- <use 10_digit_numbers.jpg>
-Package pdftex.def Info: 10_digit_numbers.jpg used on input line 223.
-(pdftex.def)             Requested size: 321.1943pt x 240.89572pt.
-
-<100_digit_numbers_freq.jpg, id=49, 803.0pt x 602.25pt>
-File: 100_digit_numbers_freq.jpg Graphic file (type jpg)
-
-<use 100_digit_numbers_freq.jpg>
-Package pdftex.def Info: 100_digit_numbers_freq.jpg used on input line 225.
-(pdftex.def)             Requested size: 321.1943pt x 240.89572pt.
-
-<1000_digit_numbers.jpg, id=50, 803.0pt x 602.25pt>
-File: 1000_digit_numbers.jpg Graphic file (type jpg)
-
-<use 1000_digit_numbers.jpg>
-Package pdftex.def Info: 1000_digit_numbers.jpg used on input line 235.
-(pdftex.def)             Requested size: 321.1943pt x 240.89572pt.
- [9] [10 <./2digit_iterationfreq.jpg> <./4digit_iteration_freq.jpg>] [11 <./10_
-digit_numbers.jpg> <./100_digit_numbers_freq.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 244--245
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 246--247
-
- []
-
-[12 <./1000_digit_numbers.jpg>]
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ô in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ô in font cmr10!
-
-Overfull \hbox (101.76025pt too wide) in paragraph at lines 255--270
- [] 
- []
-
-[13]
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no î in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no î in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no î in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ú in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ù in font cmr10!
- [14] [15]
-Underfull \hbox (badness 10000) in paragraph at lines 297--299
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 300--301
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 302--303
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 304--305
-
- []
-
-[16] (./euclid.aux) ) 
+ [1] [2] [3] (./paper2.aux) ) 
 Here is how much of TeX's memory you used:
- 1839 strings out of 493117
- 26619 string characters out of 6135433
- 87505 words of memory out of 5000000
- 5284 multiletter control sequences out of 15000+600000
+ 1813 strings out of 493117
+ 25935 string characters out of 6135433
+ 82505 words of memory out of 5000000
+ 5264 multiletter control sequences out of 15000+600000
  16499 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,8n,23p,1506b,247s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2014/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmbx10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmbx12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmcsc10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmex10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmmi10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmmi8.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmr10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmr12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mr17.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
-6.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.p
-fb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pf
-b></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on euclid.pdf (17 pages, 502916 bytes).
+ 37i,5n,23p,233b,247s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2014/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmr10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmr17.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmti12.pfb>
+Output written on paper2.pdf (4 pages, 88869 bytes).
 PDF statistics:
- 122 PDF objects out of 1000 (max. 8388607)
- 81 compressed objects within 1 object stream
+ 47 PDF objects out of 1000 (max. 8388607)
+ 31 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
