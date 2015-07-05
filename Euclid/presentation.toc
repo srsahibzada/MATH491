@@ -5,6 +5,7 @@
 \beamer@sectionintoc {2}{Euclidean Algorithm Iterations and Results}{5}{0}{2}
 \beamer@subsectionintoc {2}{1}{What to explore}{5}{0}{2}
 \beamer@subsectionintoc {2}{2}{Distribution Results}{6}{0}{2}
+\beamer@subsectionintoc {2}{3}{Notes}{11}{0}{2}
 \beamer@sectionintoc {3}{Introduction to Complexity Theory}{12}{0}{3}
 \beamer@sectionintoc {4}{Euclidean Algorithm Variations}{12}{0}{4}
 \beamer@sectionintoc {5}{Complexity Results}{12}{0}{5}
