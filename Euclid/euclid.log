@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  15 JUN 2015 15:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  5 JUL 2015 16:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -83,18 +83,18 @@ LaTeX Info: Redefining \bm on input line 203.
 ) (./euclid.aux)
 \openout1 = `euclid.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
 
 (/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -158,20 +158,20 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <17.28> on input line 19.
+(Font)              <17.28> on input line 20.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 19.
+(Font)              <12> on input line 20.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 41.
+(Font)              <10.95> on input line 42.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 41.
+(Font)              <8> on input line 42.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 41.
+(Font)              <6> on input line 42.
 
 <tamulogo.png, id=1, 248.93pt x 203.76125pt>
 File: tamulogo.png Graphic file (type png)
  <use tamulogo.png>
-Package pdftex.def Info: tamulogo.png used on input line 60.
+Package pdftex.def Info: tamulogo.png used on input line 61.
 (pdftex.def)             Requested size: 74.67957pt x 61.12883pt.
  [1
 
@@ -192,17 +192,17 @@ Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ô in font cmr10!
  [2]
-Underfull \hbox (badness 10000) in paragraph at lines 125--128
+Underfull \hbox (badness 10000) in paragraph at lines 126--129
 
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 129--130
+Underfull \hbox (badness 10000) in paragraph at lines 130--131
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 131--132
+Underfull \hbox (badness 10000) in paragraph at lines 132--133
 
  []
 
@@ -213,17 +213,17 @@ Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ù in font cmr10!
 
-Underfull \hbox (badness 10000) in paragraph at lines 133--137
+Underfull \hbox (badness 10000) in paragraph at lines 134--138
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 133--137
+Underfull \hbox (badness 10000) in paragraph at lines 134--138
 
  []
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 163--167
+Underfull \hbox (badness 10000) in paragraph at lines 164--168
 
  []
 
@@ -234,7 +234,7 @@ Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ù in font cmr10!
 [5] [6] [7]
-Underfull \hbox (badness 10000) in paragraph at lines 210--212
+Underfull \hbox (badness 10000) in paragraph at lines 211--213
 
  []
 
@@ -242,43 +242,43 @@ Underfull \hbox (badness 10000) in paragraph at lines 210--212
 File: 2digit_iterationfreq.jpg Graphic file (type jpg)
 
 <use 2digit_iterationfreq.jpg>
-Package pdftex.def Info: 2digit_iterationfreq.jpg used on input line 215.
+Package pdftex.def Info: 2digit_iterationfreq.jpg used on input line 216.
 (pdftex.def)             Requested size: 321.1943pt x 240.89572pt.
 
 <4digit_iteration_freq.jpg, id=47, 803.0pt x 602.25pt>
 File: 4digit_iteration_freq.jpg Graphic file (type jpg)
 
 <use 4digit_iteration_freq.jpg>
-Package pdftex.def Info: 4digit_iteration_freq.jpg used on input line 217.
+Package pdftex.def Info: 4digit_iteration_freq.jpg used on input line 218.
 (pdftex.def)             Requested size: 321.1943pt x 240.89572pt.
 
 <10_digit_numbers.jpg, id=48, 803.0pt x 602.25pt>
 File: 10_digit_numbers.jpg Graphic file (type jpg)
  <use 10_digit_numbers.jpg>
-Package pdftex.def Info: 10_digit_numbers.jpg used on input line 223.
+Package pdftex.def Info: 10_digit_numbers.jpg used on input line 224.
 (pdftex.def)             Requested size: 321.1943pt x 240.89572pt.
 
 <100_digit_numbers_freq.jpg, id=49, 803.0pt x 602.25pt>
 File: 100_digit_numbers_freq.jpg Graphic file (type jpg)
 
 <use 100_digit_numbers_freq.jpg>
-Package pdftex.def Info: 100_digit_numbers_freq.jpg used on input line 225.
+Package pdftex.def Info: 100_digit_numbers_freq.jpg used on input line 226.
 (pdftex.def)             Requested size: 321.1943pt x 240.89572pt.
 
 <1000_digit_numbers.jpg, id=50, 803.0pt x 602.25pt>
 File: 1000_digit_numbers.jpg Graphic file (type jpg)
 
 <use 1000_digit_numbers.jpg>
-Package pdftex.def Info: 1000_digit_numbers.jpg used on input line 235.
+Package pdftex.def Info: 1000_digit_numbers.jpg used on input line 236.
 (pdftex.def)             Requested size: 321.1943pt x 240.89572pt.
  [9] [10 <./2digit_iterationfreq.jpg> <./4digit_iteration_freq.jpg>] [11 <./10_
 digit_numbers.jpg> <./100_digit_numbers_freq.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 244--245
+Underfull \hbox (badness 10000) in paragraph at lines 245--246
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 246--247
+Underfull \hbox (badness 10000) in paragraph at lines 247--248
 
  []
 
@@ -290,7 +290,7 @@ Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ô in font cmr10!
 
-Overfull \hbox (101.76025pt too wide) in paragraph at lines 255--270
+Overfull \hbox (101.76025pt too wide) in paragraph at lines 256--271
  [] 
  []
 
@@ -311,22 +311,22 @@ Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ù in font cmr10!
  [14] [15]
-Underfull \hbox (badness 10000) in paragraph at lines 297--299
+Underfull \hbox (badness 10000) in paragraph at lines 298--300
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 300--301
+Underfull \hbox (badness 10000) in paragraph at lines 301--302
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 302--303
+Underfull \hbox (badness 10000) in paragraph at lines 303--304
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 304--305
+Underfull \hbox (badness 10000) in paragraph at lines 305--306
 
  []
 
@@ -353,7 +353,7 @@ mr17.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
 fb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pf
 b></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
 </usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on euclid.pdf (17 pages, 502916 bytes).
+Output written on euclid.pdf (17 pages, 502921 bytes).
 PDF statistics:
  122 PDF objects out of 1000 (max. 8388607)
  81 compressed objects within 1 object stream
