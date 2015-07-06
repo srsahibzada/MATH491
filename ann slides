@@ -1,0 +1,216 @@
+
+\section{Introduction to Neural Networks}
+\begin{frame}
+Artificial Intelligence (AI) is a growing area in computer science with a myriad of applications across disciplines.  AI is divided into subgroups of study with seven fundamental areas:
+\begin{enumerate}
+\item reasoning
+\item knowledge
+\item planning
+\item learning
+\item communication/natural language processing
+\item perception
+\item moving and manipulating
+\end{enumerate}
+As well as an eighth subgroup:
+\begin{enumerate}[8.]
+\item the notion of distributed intelligence.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\begin{itemize}
+\item Machine learning: refers to the ability of a computer to study data, form patterns, and make predictions
+\item Typical applications of AI involve pattern-recognition problems; however, applying AI and machine learning methods specifically to number theory problems has not been studied thoroughly
+\item Our aim was to evaluate the effectiveness of an Artificial Neural Network when applied to three key problems:
+\begin{enumerate}
+\item Classification of prime and composite numbers
+\item Integer factorization
+\item Determining the greatest common divisor (GCD)
+\end{enumerate}
+\end{itemize}
+\end{frame}
+
+\section{Artificial Neural Networks and Their Architecture}
+\begin{frame}
+\begin{itemize}
+\item At its core, an artificial neural network is an abstraction for the functionality of neurons and human cognition
+\item The process of learning is achieved through alterations of synaptic connections between neurons, making an ANN the ideal choice for pattern-recognition problems
+\end{itemize}
+\end{frame}
+
+\subsection{The Neuron}
+
+\begin{frame}
+
+\begin{figure}
+
+	\center \includegraphics[scale=.8]{neuron_image.jpg}
+	\center \tiny(Figure 6)
+
+\end{figure}
+
+\end{frame}
+
+\begin{frame}
+
+\begin{itemize}
+\item Input is provided to an input function
+\item Each input has an associated weight
+\item Each neuron will then compute a weighted sum of its inputs 
+\item Then it applies an activation function to act as a threshold to derive output
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+
+There are several options for Thresholding Functions:
+
+\begin{itemize}
+\item AND
+\item OR
+\item XOR
+\item Linear
+\item Sigmoid
+\item Hyperbolic Tangent 
+\end{itemize}
+
+The complexity of the problem being attempted by the ANN determines the correct function to use.
+
+\end{frame}
+
+\begin{frame}
+\begin{itemize}
+\item Neurons whose activation functions create hard thresholds are called perceptrons.  
+\item Neurons whose activation functions are logistic functions are known as sigmoid perceptrons.
+\item The perceptron maps input directly to output.
+\item Historically, single perceptrons were used to solve problems, but were not nearly as successful.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+There are two principal ANN architectures:
+\begin{enumerate}
+\item Feed-forward networks
+\begin{itemize}
+\item Directed, acyclic graph
+\item Flows in one direction only
+\item It maintains no internal state nor represents more than the input passed to the network
+\item May be split into multiple layers: Input, Hidden, Output
+\item Lacks any kind of memory
+\end{itemize}
+\item Recurrent Networks
+\begin{itemize}
+\item Utilizes the notion of recurrence 
+\item Cyclic
+\item Maintains a small amount of short-term memory
+\end{itemize}
+\end{enumerate}
+
+\end{frame}
+
+\begin{frame}
+There are two main learning methods in an ANN:
+\begin{enumerate}
+\item Supervised
+\begin{itemize}
+\item Done through an external teacher
+\item The network is told the desired response to certain input signals
+\item Reinforcement learning is a form of supervised where a correct response is given a certain weight and the better the weight, the more correct the answer
+\end{itemize}
+
+\item Unsupervised
+\begin{itemize}
+\item Also known as self-organizing
+\item Based entirely upon local information
+\item The network is given a large amount of data and allowed to recognize its own patterns
+\end{itemize}
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+Implementation of any learning algorithm, supervised or unsupervised, is complicated by the presence of multiple outputs and hidden layers of the network: the fact that the hidden layer leaves its computations out of reach of the user means that any information obtained about errors at the hidden layer is all but useless to the user. Therefore, an algorithm for backpropagation must be used to back-propagate errors from the output layer to hidden layers.
+\end{frame}
+
+\begin{frame}
+\begin{figure}
+	\center \includegraphics[scale=.195]{backprop.png}
+	\center \tiny(Figure 7)
+\end{figure}
+\end{frame}
+
+
+\section{Attempts at using Neural Networks}
+\begin{frame}
+The ANN was implemented in Python, using the Pybrain machine learning library.
+The network was set up as a reinforced back-propagation system.
+For factorization, a class was defined containing prime factorizations of numbers 1 through 15.
+For primality testing, a list of prime numbers up to 10,000 was obtained.
+For the GCD problem, numbers were randomly generated from 0 to 100, and every possible combination of pairs tested.
+\end{frame}
+
+\begin{frame}
+The teaching dataset used was combinations of ($x$,$y$), with $x$ ranging from $2$-$5$ and $y$ ranging from $1$-$20$.  
+The input was a pair of $x$ and $y$ combined with the desired output of the gcd.  It was set up to randomly go through $10,000$ iterations of the training dataset and then attempt to guess the output for each of the teaching entries.
+For the majority of the runs, there were $2$ hidden layers activated.
+When the learning rate was increased from $0.05$ to $0.1$, the results improved slightly, though not drastically.
+Momentum was determined to work best at the value $0.025$.
+Surprisingly, the organization of the training data had some of the most interesting results.
+\end{frame}
+
+\begin{frame}
+Sample data:
+(2,1) [ 1.]
+(2,2) [ 2.]
+(2,3) [ 1.58476845]
+\newline (2,4) [ 1.58827758]
+(2,5) [ 1.58827945]
+(2,6) [ 1.58827945]
+\newline (2,7)  [ 1.58827945]
+(2,8) [ 1.58827945]
+(2,9) [ 1.58827945]
+\newline (2,10)  [ 1.58827945]
+(3,1) [ 0.99940695]
+(3,2) [ 1.00206377]
+\newline (3,3) [ 3.38776544]
+(3,4) [ 1.58842719]
+(3,5) [ 1.58827903]
+\newline (3,6) [ 1.58827945]
+(3,7) [ 1.58827945]
+(3,8) [ 1.58827945]
+\newline (3,9) [ 1.58827945]
+(3,10) [ 1.58827945]
+(4,1) [ 0.99940584]
+\newline (4,2) [ 0.99941081]
+(4,3) [ 1.01127187]
+(4,4) [ 4.41099692]
+\newline (4,5) [ 1.58941163]
+(4,6) [ 1.58827936]
+(4,7) [ 1.58827945]
+\newline (4,8) [ 1.58827945]
+(4,9) [ 1.58827945]
+(4,10) [ 1.58827945]
+\newline (5,1) [ 0.99940584]
+(5,2) [ 0.99940585]
+(5,3) [ 0.99942807]
+\newline (5,4) [ 1.05195013]
+(5,5) [ 4.77198339]
+\end{frame}
+
+\section{Neural Networks Results}
+
+\begin{frame}
+There are several explanations that could be applied to why the network was unable to produce the desired results.
+\begin{enumerate}
+\item The training dataset could have been too small.
+\item Prime numbers do not follow a well-defined pattern.
+\item Only feed-forward networks were used.
+\item Not all potential functions for activation were tested.
+\item While various parameters of the network were tested, very little was tested in the way of data representation beyond an elementary normalization of GCD inputs and outputs.
+\item Finally, it could be that a neural network in the implementation used for our project is simply not well suited for this type of problem.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+There have already been well established algorithms, as demonstrated in the previous project, which rely on more concrete building blocks than just recognizing patterns that may not even be there. It is possible that other methods of artificial intelligence, such as support vector machines, might have more success at one or all of the problems investigated.
+\end{frame}
