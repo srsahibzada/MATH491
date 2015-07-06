@@ -224,18 +224,39 @@ Operation & Bit-Complexity \\  \hline
 \STATE{Input: integers U, V}
 \STATE{Output: GCD(U,V)}
 \IF{ V == 0 }
-\STATE{return U}
+\STATE{return V}
 \ELSE
-\STATE{TEMP = V}
-\STATE{V = roundMod(U,V)}
-\STATE{U = TEMP}
-\STATE{return RecursiveEuclidean(V, U MOD V)}
+\STATE{return LeastRemainderEuclidean(V, U MOD V)}
 \ENDIF
 
 \end{algorithmic}
 \end{algorithm}
 \end{frame}
 
+\begin{frame}
+\frametitle{Auxiliary Functions for Least Remainder}
+\begin{algorithm}[H]
+\begin{algorithmic}
+\STATE{Input: integers U,V}
+\STATE{Output: "Round Mod" function}
+\IF{V == 0}
+\STATE{return U}
+\ELSE
+\STATE{Return U = (V * ROUND(U / V))}
+\ENDIF
+\end{algorithmic}
+\end{algorithm}
+
+\begin{algorithm}[H]
+\begin{algorithmic}
+\STATE{Input: integers U to round}
+\STATE{Output: Integer round function}
+\STATE{Frac = U - $0.5$}
+\STATE{Return CEIL(Frac) as Integer}
+
+\end{algorithmic}
+\end{algorithm}
+\end{frame}
 \begin{frame}
 \frametitle{Binary GCD}
 \begin{algorithm}[H]
@@ -256,17 +277,28 @@ Operation & Bit-Complexity \\  \hline
 		\STATE{t \textless - abs(U-V)/2}
 		\IF{U \textless V}
 			\STATE{V \textless - t}
-		\ELSE
-			\STATE{U \textless - T}
-			\STATE{MAX(U,V) = abs(U,V)/2}
-		\ENDIF
+		\ENDIF		
 	\ENDIF
 \ENDWHILE
+\end{algorithmic}
+\end{algorithm}
+\end{frame}
+
+\begin{frame}
+\frametitle{Binary GCD cont'd}
+\begin{algorithm}[H]
+\begin{algorithmic}
+		\STATE{else}
+			\STATE{U \textless - T}
+			\STATE{MAX(U,V) = abs(U,V)/2}
+		
 \STATE{return g*V}
 
 \end{algorithmic}
 \end{algorithm}
 \end{frame}
+
+
 \section{Implementation Detail: Java BigInteger Library}
 \begin{frame}
 \frametitle{Implementation Detail: Java BigInteger Library}
