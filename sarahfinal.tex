@@ -226,6 +226,9 @@ Operation & Bit-Complexity \\  \hline
 \IF{ V == 0 }
 \STATE{return U}
 \ELSE
+\STATE{TEMP = V}
+\STATE{V = roundMod(U,V)}
+\STATE{U = TEMP}
 \STATE{return RecursiveEuclidean(V, U MOD V)}
 \ENDIF
 
