@@ -1,0 +1,351 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Beamer Presentation
+% LaTeX Template
+% Version 1.0 (10/11/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND THEMES
+%----------------------------------------------------------------------------------------
+
+\documentclass{beamer}
+
+\mode<presentation> {
+
+% The Beamer class comes with a number of default slide themes
+% which change the colors and layouts of slides. Below this is a list
+% of all the themes, uncomment each in turn to see what they look like.
+
+%\usetheme{default}
+%\usetheme{AnnArbor}
+%\usetheme{Antibes}
+%\usetheme{Bergen}
+%\usetheme{Berkeley}
+%\usetheme{Berlin}
+%\usetheme{Boadilla}
+%\usetheme{CambridgeUS}
+%\usetheme{Copenhagen}
+%\usetheme{Darmstadt}
+%\usetheme{Dresden}
+%\usetheme{Frankfurt}
+%\usetheme{Goettingen}
+%\usetheme{Hannover}
+%\usetheme{Ilmenau}
+%\usetheme{JuanLesPins}
+%\usetheme{Luebeck}
+\usetheme{Madrid}
+%\usetheme{Malmoe}
+%\usetheme{Marburg}
+%\usetheme{Montpellier}
+%\usetheme{PaloAlto}
+%\usetheme{Pittsburgh}
+%\usetheme{Rochester}
+%\usetheme{Singapore}
+%\usetheme{Szeged}
+%\usetheme{Warsaw}
+
+% As well as themes, the Beamer class has a number of color themes
+% for any slide theme. Uncomment each of these in turn to see how it
+% changes the colors of your current slide theme.
+
+%\usecolortheme{albatross}
+%\usecolortheme{beaver}
+%\usecolortheme{beetle}
+%\usecolortheme{crane}
+%\usecolortheme{dolphin}
+%\usecolortheme{dove}
+%\usecolortheme{fly}
+%\usecolortheme{lily}
+%\usecolortheme{orchid}
+%\usecolortheme{rose}
+%\usecolortheme{seagull}
+%\usecolortheme{seahorse}
+%\usecolortheme{whale}
+%\usecolortheme{wolverine}
+
+%\setbeamertemplate{footline} % To remove the footer line in all slides uncomment this line
+%\setbeamertemplate{footline}[page number] % To replace the footer line in all slides with a simple slide count uncomment this line
+
+%\setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides uncomment this line
+}
+
+\usepackage{graphicx} % Allows including images
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
+\usepackage{algorithm2e}
+\usepackage{algorithmic}
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+
+\title[Euclidean Algorithm]{Exploring the Euclidean Algorithm} % The short title appears at the bottom of every slide, the full title is only on the title page
+
+\author{Stephen Capps, Sarah Sahibzada, \& Taylor Wilson} % Your name
+\institute[TAMU] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
+{
+Texas A\&{}M University \\ % Your institution for the title page
+\medskip
+\textit{Supervisor: Sara Pollock} % Your email address
+}
+\date{\today} % Date, can be changed to a custom date
+
+\begin{document}
+
+\begin{frame}
+\titlepage % Print the title page as the first slide
+\end{frame}
+
+\begin{frame}
+\frametitle{Overview} % Table of contents slide, comment this block out to remove it
+\tableofcontents % Throughout your presentation, if you choose to use \section{} and \subsection{} commands, these will automatically be printed on this slide as an overview of your presentation
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+%	PRESENTATION SLIDES
+%----------------------------------------------------------------------------------------
+
+%------------------------------------------------
+
+
+\section{Euclidean Algorithm Iterations and Results}
+
+\subsection{What to explore}
+\begin{frame}
+Next, we decided to explore the distributions of these iterations:
+Do most pairs take many iterations? What is the distribution?
+
+The following graphs are the answer to these questions.
+
+
+\end{frame}
+%----------------------------------------------------------------------------------------
+\section{Introduction to Complexity Theory}
+\begin{frame}
+\frametitle{Introduction to Complexity Theory}
+\indent Insofar as this course focuses on algorithms, it is first necessary to define the term 'algorithm', as well as several other auxiliary terms used across this presentation.
+It is necessary to define some sort of \underline{machine-independent} metric for algorithm running time, so it can be universally used. It is also necessary to define some auxiliary terms to do this:
+\begin{itemize}
+\item An \underline{algorithm} is a well-defined computational procedure that takes a variable input and halts with an output. (Oorschot and Vanstone, A Handbook of Applied Cryptography)
+\item The \underline{running-time} of an algorithm is a function of the number of single-bit operations it takes for an algorithm to complete. 
+\item The \underline{size} of an input is the number of bits in the input, or the number of inputs, to an algorithm.
+\item The \underline{execution time} of an algorithm's implementation is taken here to mean the average amount of time in nanoseconds for a particular implementation of an algorithm to run. 
+\end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{A Crash Course in Algorithmic Analysis}
+\indent Often, the run-time functions can grow to be complex and involve multiple factors. It is often enough to know that a particular algorithm "grows proportionally to" some value (Goodrich, Data Structures and Algorithms in C++). This is known as \underline{asymptotic notation}. \\
+\begin{itemize}
+\item Let f(n) and g(n) be functions such that $f(n): \mathbb{Z}->\mathbb{R}$ and $g(n): \mathbb{Z}->\mathbb{R}$. Then we say that f(n) is O(g(n)) iff $\exists$ c \textgreater $0$ and n $\in$ $\mathbb{Z}$ such that 
+f(n) $\leq$ cg(n), for $\forall$ n' $\geq$ n 
+\item This is known as Big-O notation. It allows us to ignore constant factors and lower-order terms, focusing only on the highest-order term--the one which governs its asymptotic behavior.
+\item In general, there are six functions fundamental to algorithmic analysis: log(n) \textless n \textless n log(n) \textless $n^2$ \textless $n^3$ \textless $2^n$ (Goodrich, Data Structures and Algorithms in C++)
+\item Hence, this is known as asymptotic notation.
+\end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{Bit-Complexity of Integer Operations}
+\indent In the ring of integers, we define the bit complexity of addition and multiplication, as well as their inverses, as below: \\ 
+\begin{tabular}{|r|l|}
+\hline
+Operation & Bit-Complexity \\  \hline
++ & O(log(a) + log(b)) = O(log(n)) \\  \hline
+- & O(log(a) + log(b)) = O(log(n)) \\ \hline
+* & O(log(a) * log(b)) = O($log(n)^2$) \\ \hline
+\textbackslash & O(log(a) * log(b)) = O($log(n)^2$) \\ \hline
+
+\end{tabular} \\
+\indent These are fundamental values; they allow a baseline computation for running-time complexity. Things like recursion, which incur an extra execution time penalty for function calls, are one of many factors that can confound execution time. \\
+\end{frame}
+\section{Euclidean Algorithm Variations}
+\begin{frame}
+\frametitle{Euclidean Algorithm Variations}
+\indent Three iterative versions, two recursive versions, and two binary versions of this algorithm were implemented. 
+\begin{itemize}
+\item Binary GCD algorithm will run with O($log(b)^2$) bit complexity, where b represents the maximum number of bits in the integer inputs.
+\item The iterative modular algorithm will run with O(log(u) * log(v)), where u and v are integer inputs. The execution time may be longer, due to an added penalty for function calls.
+\item The least-remainders Euclidean algorithm will run in, at the worst case, O(log(u) * log(v)). (Bach and Shallit, Algorithmic Number Theory).
+\end{itemize}
+\end{frame}
+\section{The Algorithms}
+
+\begin{frame}
+\frametitle{Iterative, Subtractive}
+\begin{algorithm}[H]
+\begin{algorithmic}
+\STATE{Input: integers U, V}
+\STATE{Output: GCD(U,V)}
+\IF{ U \textgreater V}
+	\STATE{swap(U,V)}
+\ENDIF
+\WHILE{U $\neq$ V}
+	\IF{U \textgreater V}
+	\STATE{U <- U - V}
+	\ELSE
+		\STATE{V = V - U}
+	\ENDIF
+\ENDWHILE
+
+\STATE{return U}
+\end{algorithmic}
+\end{algorithm}
+\end{frame}
+
+\begin{frame}
+\frametitle{Iterative, Modular}
+\begin{algorithm}[H]
+\begin{algorithmic}
+\STATE{Input: integers U, V}
+\STATE{Output: GCD(U,V)}
+\IF{ V \textgreater U}
+	\STATE{swap(U,V)}
+\ENDIF
+\WHILE{U $\neq$ V}
+	\STATE{(U,V) \textless - (V, U MOD V)}
+\ENDWHILE
+\STATE{return U}
+\end{algorithmic}
+\end{algorithm}
+\indent (Bach and Shallit, Algorithmic Number Theory)
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Recursive, Least Remainder}
+\begin{algorithm}[H]
+\begin{algorithmic}
+\STATE{Input: integers U, V}
+\STATE{Output: GCD(U,V)}
+\IF{ V == 0 }
+\STATE{return U}
+\ELSE
+\STATE{return RecursiveEuclidean(V, U MOD V)}
+\ENDIF
+
+\end{algorithmic}
+\end{algorithm}
+\end{frame}
+
+\begin{frame}
+\frametitle{Binary GCD}
+\begin{algorithm}[H]
+\begin{algorithmic}
+\STATE g \textless - $1$
+\WHILE{U, V are even}
+	\STATE{U \textless - $U/2$}
+	\STATE{V \textless - $V/2$}
+	\STATE{ g = 2g } 
+\ENDWHILE
+
+\WHILE{U $\neq$ 0}
+	\IF{U is even}
+		\STATE{U \textless - $U/2$}
+	\ELSIF{V is even}
+		\STATE{V \textless - $V/2$}
+	\ELSE
+		\STATE{t \textless - abs(U-V)/2}
+		\IF{U \textless V}
+			\STATE{V \textless - t}
+		\ELSE
+			\STATE{U \textless - T}
+			\STATE{MAX(U,V) = abs(U,V)/2}
+		\ENDIF
+	\ENDIF
+\ENDWHILE
+\STATE{return g*V}
+
+\end{algorithmic}
+\end{algorithm}
+\end{frame}
+\section{Implementation Detail: Java BigInteger Library}
+\begin{frame}
+\frametitle{Implementation Detail: Java BigInteger Library}
+\begin{itemize} 
+\item In order to test these algorithms against large numbers, the Java BigInteger Library was used due to its support for arbitrary-precision arithmetic and numbers.
+	\begin{itemize}
+	\item A BigInteger is an abstraction for an arbitrary-length bit string
+	\item In-built GCD function against which our algorithms were compared
+	\item No in-built random number generator; used Java's random number 	generator to generate individual bits in a string and wrap these into a 	BigInteger
+	\end{itemize}
+\item Hierarchical implementation: parent Euclidean Algorithm class with Iterative Algorithm and Recursive Algorithm derived classes; each implementation was a subclass of these
+\item In all cases, the corresponding BigInteger arithmetic operation was used; for the binary GCD algorithm, both the arithmetic operations and functions which performed direct bit shifting, were used.
+\item All data were collected on a Linux-based server hosted through the Texas A\&M University Department of Computer Science. This process was automated with scripts in Bash.
+\end{itemize}
+\end{frame}
+\section{Baseline Run-Times for BigInteger Library Functions}
+\begin{frame}
+\frametitle{Baseline Run-Times for BigInteger Library Functions}
+\indent In order to effectively measure the running-time of each algorithm, some data on the execution-time of the relevant BigInteger functions were collected, as well as the execution time of our random number generation function: \\
+\begin{tabular}{|l|r|}
+\hline
+Function & Average Time (ns) \\ \hline
+Random Number Generation & 1.9e5 ns \\ \hline
+Addition & 1.3e5 ns \\ \hline
+Subtraction & 1.0e5 ns \\ \hline
+Multiplication & 1.4e5 ns \\ \hline
+Modulus & 1.4e5 ns \\ \hline
+Division & 1.7e5 ns \\ \hline
+Left Shift & 3.9e2 ns \\ \hline
+Right Shift & 4.7e2 ns \\ \hline
+Absolute Value & 2.3e2 ns \\ \hline
+Assignment & 2.1e2 ns \\ \hline
+
+\end{tabular}
+\\ \indent All data measured was adjusted to account for the costs of absolute value, random number generation, et cetera.
+\end{frame}
+\section{Complexity Analysis Results}
+\begin{frame}
+\frametitle{Complexity Analysis Results}
+The resultant execution times for each algorithm are given below:
+
+\begin{tabular}{|l|l|}
+\hline
+	\textbf{Algorithm} & \textbf{Execution Time}
+	\\
+	\hline Extended & 6.09e9 ns\\
+	\hline Iterative, Mod & 4.35e9 ns\\
+	\hline Iterative, Subtractive & 1.91e9 ns\\
+	\hline Recursive, Mod & 4.77e9 ns\\
+	\hline Recursive, Least Positive Remaidner
+ & 11.8e9 ns\\
+	\hline Stein’s Binary Algorithm, BigInteger Operations & 6.04e9 ns\\
+	\hline Stein’s Binary Algorithm, Bit Shifting Operations & 4.68e9 ns\\
+	\hline Java BigInteger GCD & 1.30e9 ns\\
+	\hline
+\end{tabular}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Discussion}
+\begin{itemize}
+\item A large number of runs for each algorithm were averaged; time elapsed was calculated using the Java System.nanoTime() timer, and adjusted for superfluous costs 
+\item Subtractive was among the fastest; lower bitwise cost?
+\item Direct bit shifting was also among the fastest; working directly with hardware
+\item Number of iterations varied: direct bit shifting was the most expensive bitwise
+\item No strong correlation between number of iterations and execution time: least positive remainder is the quickest in terms of iterations, but one of the slower in execution time
+\end{itemize}
+\end{frame}
+
+\section{Future Work In This Area}
+\begin{frame}
+\frametitle{Future Work In This Area}
+\begin{itemize}
+\item All Java programs are run on a virtual machine, allowing a great degree of platform independence; future repetitions will not see a significant change in execution time.
+\item Future computational work might consider consolidations of less-expensive bitwise operations rather than consolidations of steps (in the vein of the modulus function)
+\item Consider parallel implementations of GCD algorithms
+\end{itemize}
+\end{frame}
+\section{Introduction to Neural Networks}
+
+\section{Attempts at using Neural Networks}
+
+\section{Neural Networks Results}
+\end{document} 
